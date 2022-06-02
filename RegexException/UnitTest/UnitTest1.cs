@@ -72,5 +72,20 @@ namespace UnitTest1
                 Assert.AreEqual(expected, exception.Message);
             }
         }
+        [Test]
+        public void Validating_PassWord_Rule_One()
+        {
+            //Arrange
+            string password = "linux";
+            string expected = "PassWord is InValid";
+            try
+            {
+                person.Validate_Password_RuleOne(password);
+            }
+            catch (CustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
     }
 }

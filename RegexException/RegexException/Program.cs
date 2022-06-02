@@ -34,6 +34,12 @@ namespace RegexException
             Console.WriteLine("Enter The Phone_Number: ");
             string Phone_Number = Console.ReadLine();
             person.ValidatePhoneNumber(Phone_Number);
+
+            //UC5
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Enter The Phone_Number: ");
+            string password = Console.ReadLine();
+            person.Validate_Password_RuleOne(password);
         }
     }
 }

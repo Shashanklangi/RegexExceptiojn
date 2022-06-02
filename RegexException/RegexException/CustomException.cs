@@ -16,6 +16,7 @@ namespace RegexException
             LastName,
             Email,
             PhoneNumber,
+            Password,
         }
         public CustomException(Exceptiontype type, string message) : base(message)
         {
