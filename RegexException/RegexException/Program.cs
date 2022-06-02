@@ -46,6 +46,12 @@ namespace RegexException
             Console.WriteLine("Enter The Password: ");
             string passwordTwo = Console.ReadLine();
             person.Validate_Password_RuleOne(passwordTwo);
+
+            //UC7
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Enter The Password: ");
+            string passwordThree = Console.ReadLine();
+            person.Validate_Password_RuleOne(passwordThree);
         }
     }
 }

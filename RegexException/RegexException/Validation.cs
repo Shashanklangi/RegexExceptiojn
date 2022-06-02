@@ -15,6 +15,7 @@ namespace RegexException
         public string PhoneNumber = ("^[A-Za-z]{3,}@[a-z]{3,}.[a-z]{3,}$");
         public string PassWordRuleOne = ("^[A-z0-9a-z@#&*+]{8,}$");
         public string PassWordRuleTwo = ("^[A-Z]{1,}[A-z0-9a-z@#&*+]{8,}$");
+        public string PassWordRuleThree = ("^[A-Z]{1,}[0-9A-Za-z!@#$%^&*-]{6,}[0-9]{1,}$");
         public string ValidateFirstName(string firstNamevalid)
         {
             Regex regex = new Regex(FirstName);
@@ -117,6 +118,25 @@ namespace RegexException
             try
             {
                 if (regex.IsMatch(PassWordRuleTwo))
+                {
+                    return "Password is Valid";
+                }
+                else
+                {
+                    throw new CustomException(CustomException.Exceptiontype.Password, "Password is InValid");
+                }
+            }
+            catch
+            {
+                throw new CustomException(CustomException.Exceptiontype.Password, "Password is InValid");
+            }
+        }
+        public string Validate_Password_RuleThree(string passwordThree)
+        {
+            Regex regex = new Regex(PassWordRuleThree);
+            try
+            {
+                if (regex.IsMatch(PassWordRuleThree))
                 {
                     return "Password is Valid";
                 }
