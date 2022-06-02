@@ -10,6 +10,7 @@ namespace RegexException
     public class Validation
     {
         public string FirstName = ("^[A-Z]{1}[A-Za-z]{3,}$");
+        public string LastName = ("^[A-Z]{1}[A-Za-z]{3,}$");
         public string ValidateFirstName(string firstNamevalid)
         {
             Regex regex = new Regex(FirstName);           
@@ -29,6 +30,25 @@ namespace RegexException
                 throw new CustomException(CustomException.Exceptiontype.FirstName, "First Name is InValid");
             }
         }
-        
+        public string ValidateLastName(string lastNamevalid)
+        {
+            Regex regex = new Regex(LastName);
+            try
+            {
+                if (regex.IsMatch(lastNamevalid))
+                {
+                    return "LastName is Valid";
+                }
+                else
+                {
+                    throw new CustomException(CustomException.Exceptiontype.LastName, "Last Name is InValid");
+                }
+            }
+            catch
+            {
+                throw new CustomException(CustomException.Exceptiontype.LastName, "Last Name is InValid");
+            }
+        }
+
     }
 }

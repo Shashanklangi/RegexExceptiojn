@@ -13,6 +13,7 @@ namespace RegexException
         public enum Exceptiontype
         {
             FirstName,
+            LastName,
         }
         public CustomException(Exceptiontype type, string message) : base(message)
         {

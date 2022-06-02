@@ -26,6 +26,21 @@ namespace UnitTest1
             {
                 Assert.AreEqual(expected,exception.Message);
             }
-        }              
+        }
+        [Test]
+        public void Validating_Lastname()
+        {
+            //Arrange
+            string lastname = " ";
+            string expected = "Last Name is InValid";
+            try
+            {
+                person.ValidateLastName(lastname);
+            }
+            catch (CustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
     }
 }
