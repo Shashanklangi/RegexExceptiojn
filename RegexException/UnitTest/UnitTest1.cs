@@ -117,5 +117,20 @@ namespace UnitTest1
                 Assert.AreEqual(expected, exception.Message);
             }
         }
+        [Test]
+        public void Validating_PassWord_Rule_Four()
+        {
+            //Arrange
+            string password = "liNuX";
+            string expected = "PassWord is InValid";
+            try
+            {
+                person.Validate_Password_RuleFour(password);
+            }
+            catch (CustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
     }
 }
