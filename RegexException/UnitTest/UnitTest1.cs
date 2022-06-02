@@ -131,6 +131,21 @@ namespace UnitTest1
             {
                 Assert.AreEqual(expected, exception.Message);
             }
+
+        }
+        public void Validating_all_emails()
+        {
+            //Arrange
+            string email = "Omakrgmail.in";
+            string expected = "Email is InValid";
+            try
+            {
+                person.Validate_All_Emails(email);
+            }
+            catch (CustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
         }
     }
 }

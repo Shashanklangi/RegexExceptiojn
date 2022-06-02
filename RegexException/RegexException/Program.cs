@@ -58,6 +58,12 @@ namespace RegexException
             Console.WriteLine("Enter The Password: ");
             string passwordFour = Console.ReadLine();
             person.Validate_Password_RuleOne(passwordFour);
+
+            //UC9
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Enter The Email ID: ");
+            string allemail = Console.ReadLine();
+            person.Validate_Password_RuleOne(allemail);
         }
     }
 }
