@@ -57,5 +57,20 @@ namespace UnitTest1
                 Assert.AreEqual(expected, exception.Message);
             }
         }
+        [Test]
+        public void Validating_PhoneNumber()
+        {
+            //Arrange
+            string phonenumber = " 91 1452144";
+            string expected = "PhoneNumber is InValid";
+            try
+            {
+                person.ValidatePhoneNumber(phonenumber);
+            }
+            catch (CustomException exception)
+            {
+                Assert.AreEqual(expected, exception.Message);
+            }
+        }
     }
 }

@@ -28,6 +28,12 @@ namespace RegexException
             Console.WriteLine("Enter The Email_ID: ");
             string EmailID = Console.ReadLine();
             person.ValidateEmail(EmailID);
+
+            //UC4
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Enter The Phone_Number: ");
+            string Phone_Number = Console.ReadLine();
+            person.ValidatePhoneNumber(Phone_Number);
         }
     }
 }

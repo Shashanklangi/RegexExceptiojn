@@ -12,6 +12,7 @@ namespace RegexException
         public string FirstName = ("^[A-Z]{1}[A-Za-z]{3,}$");
         public string LastName = ("^[A-Z]{1}[A-Za-z]{3,}$");
         public string Email = ("^[A-Za-z]{3,}@[a-z]{3,}.[a-z]{3,}$");
+        public string PhoneNumber = ("^[A-Za-z]{3,}@[a-z]{3,}.[a-z]{3,}$");
         public string ValidateFirstName(string firstNamevalid)
         {
             Regex regex = new Regex(FirstName);
@@ -67,6 +68,26 @@ namespace RegexException
             catch
             {
                 throw new CustomException(CustomException.Exceptiontype.Email, "Email ID is InValid");
+            }
+
+        }
+        public string ValidatePhoneNumber(string phonenumber)
+        {
+            Regex regex = new Regex(PhoneNumber);
+            try
+            {
+                if (regex.IsMatch(phonenumber))
+                {
+                    return "PhoneNumber is Valid";
+                }
+                else
+                {
+                    throw new CustomException(CustomException.Exceptiontype.PhoneNumber, "PhoneNumber is InValid");
+                }
+            }
+            catch
+            {
+                throw new CustomException(CustomException.Exceptiontype.PhoneNumber, "PhoneNumber is InValid");
             }
 
         }
