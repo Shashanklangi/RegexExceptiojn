@@ -22,6 +22,12 @@ namespace RegexException
             Console.WriteLine("Enter The Last Name: ");
             string lastName = Console.ReadLine();
             person.ValidateLastName(lastName);
+
+            //UC3
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Enter The Email_ID: ");
+            string EmailID = Console.ReadLine();
+            person.ValidateEmail(EmailID);
         }
     }
 }
